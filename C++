@@ -1,1 +1,39 @@
 
+//Https://www.luogu.org/problemnew/show/P1304
+
+#包括 <Cstdio>
+#包括 <Cstring>
+
+#定义 最大N 10000
+
+布尔是素数[MAX_N]；
+
+//埃拉托斯特尼筛法
+空隙 埃拉托斯提尼(INTn)
+{
+    梅塞特(是第一，千真万确, 大小(是总理)；
+    为 (INTI=2；I<n；++i)
+        如果(I)
+            为 (INTJ=i+i；j<n；j+=i)
+等素[j]=假的;
+}
+
+//哥德巴赫猜想
+空隙 FindGoldBachConjection(INTn)
+{
+    为 (INTI=2；I<=n/2++i)
+        如果(是素数[i]&等素数[n-i]){
+            印字("%d=%d+%d\n"，n，i，n-i；
+            回归;
+        }
+}
+
+INT 主()
+{
+    INTn；
+    扫描("%d"，&n)；
+    埃拉托斯提尼(N)；
+    为 (INTI=4；I<=n；i+=2)
+        FindGoldBachConjection(I)；
+}
+
